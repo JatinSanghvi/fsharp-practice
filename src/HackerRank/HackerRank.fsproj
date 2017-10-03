@@ -52,8 +52,9 @@
     <None Include="Warmup\001_SolveMeFirst.fsx" />
     <None Include="Warmup\002_SimpleArraySum.fsx" />
     <None Include="Warmup\003_CompareTheTriplets.fsx" />
-    <None Include="Warmup\005_DiagonalDifference.fsx" />
     <None Include="Warmup\004_AVeryBigSum.fsx" />
+    <None Include="Warmup\005_DiagonalDifference.fsx" />
+    <None Include="Warmup\006_PlusMinus.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

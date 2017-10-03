@@ -54,21 +54,22 @@ let main _ =
     let size = Console.ReadLine() |> int
     let matrix = List.init size (fun _ -> Console.ReadLine().Split [|' '|] |> Array.toList |> List.map int)
 
-    let rec diagonal_sum matrix =
-        let sub_matrix matrix =
+    let rec diagonalSum matrix =
+
+        let subMatrix matrix =
             match matrix with
-            | row :: rows -> List.map(fun row ->
+            | _ :: rows -> List.map(fun row ->
                 match row with
-                | cell :: cells -> cells
+                | _ :: cells -> cells
                 | _ -> raise (new InvalidOperationException("Invalid row"))) rows
             | _ -> raise (new InvalidOperationException("Invalid matrix"))
 
         match matrix with
         | [] -> 0
         | [[cell]] -> cell
-        | (cell :: _) :: rows -> cell + diagonal_sum (sub_matrix matrix)
+        | (cell :: _) :: _ -> cell + diagonalSum (subMatrix matrix)
         | _ -> raise (new InvalidOperationException("Invalid matrix"))
 
-    let diagonal_difference = abs ((diagonal_sum matrix) - (diagonal_sum (List.rev matrix)))
-    printfn "%d" diagonal_difference
+    let diagonalDifference = abs ((diagonalSum matrix) - (diagonalSum (List.rev matrix)))
+    printfn "%d" diagonalDifference
     0

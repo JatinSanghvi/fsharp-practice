@@ -60,11 +60,12 @@ open System
 
 [<EntryPoint>]
 let main _ =
-    let aliceRatings = Console.ReadLine().Split [|' '|] |> Seq.map int
-    let bobRatings = Console.ReadLine().Split [|' '|] |> Seq.map int
+    let aliceRatings = Console.ReadLine().Split [|' '|] |> Array.map int
+    let bobRatings = Console.ReadLine().Split [|' '|] |> Array.map int
 
-    Seq.zip aliceRatings bobRatings
-        |> Seq.map (fun (ar, br) -> if ar > br then (1, 0) else if ar < br then (0, 1) else (0, 0))
-        |> Seq.reduce (fun (aSum, bSum) (a, b) -> (aSum + a, bSum + b))
-        ||> printfn "%d %d"
+    Array.zip aliceRatings bobRatings
+    |> Array.map (fun (ar, br) -> ((if ar > br then 1 else 0), (if br > ar then 1 else 0)))
+    |> Array.reduce (fun (aSum, bSum) (a, b) -> (aSum + a, bSum + b))
+    ||> printfn "%d %d"
+
     0

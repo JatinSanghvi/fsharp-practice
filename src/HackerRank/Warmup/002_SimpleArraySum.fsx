@@ -31,8 +31,10 @@ open System
 [<EntryPoint>]
 let main _ =
     Console.ReadLine() |> ignore
+
     Console.ReadLine().Split [|' '|]
-        |> Seq.map int
-        |> Seq.sum
-        |> printfn "%d"
+    |> Array.map int
+    |> Array.sum
+    |> printfn "%d"
+
     0

@@ -40,8 +40,10 @@ open System
 [<EntryPoint>]
 let main _ =
     Console.ReadLine() |> ignore
+
     Console.ReadLine().Split [|' '|]
-        |> Seq.map int64
-        |> Seq.sum
-        |> printfn "%d"
+    |> Array.map int64
+    |> Array.sum
+    |> printfn "%d"
+
     0
