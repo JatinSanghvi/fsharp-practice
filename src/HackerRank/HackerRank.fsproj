@@ -55,6 +55,7 @@
     <None Include="Warmup\004_AVeryBigSum.fsx" />
     <None Include="Warmup\005_DiagonalDifference.fsx" />
     <None Include="Warmup\006_PlusMinus.fsx" />
+    <None Include="Warmup\007_Staircase.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
