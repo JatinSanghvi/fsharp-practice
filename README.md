@@ -19,6 +19,6 @@ problem.
 
 The F# primitives like higher order functions are readily available in
 C#, they are more readable and they play well with other C# language
-features. I think the only big feature that C# misses our is the native
+features. I think the only big feature that C# misses out is the native
 support for immutability. If it can acheive it, I do not see any point
 worth spending on the F# language.
